@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 336.6, "left": -0.6, "attrs": {} },
+    { "type": "wokwi-ili9341", "id": "lcd1", "top": -18.4, "left": -9.9, "attrs": {} },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joystick1",
+      "top": 306.6,
+      "left": 322.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 451.3,
+      "left": 467.1,
+      "rotate": 270,
+      "attrs": { "color": "red", "bounce": "1", "key": "2" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 451.3,
+      "left": 409.5,
+      "rotate": 270,
+      "attrs": { "color": "green", "bounce": "1", "key": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn3",
+      "top": 451.3,
+      "left": 524.7,
+      "rotate": 270,
+      "attrs": { "color": "blue", "bounce": "1", "key": "3" }
+    },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": 206, "left": 185.5, "attrs": {} }
+  ],
+  "connections": [
+    [ "lcd1:GND", "uno:GND.1", "black", [ "v48", "h68.99" ] ],
+    [ "lcd1:VCC", "uno:VIN", "red", [ "v12", "h-48", "v276", "h197.5" ] ],
+    [ "lcd1:SCK", "uno:13", "green", [ "v16", "h-75" ] ],
+    [ "lcd1:MISO", "uno:12", "limegreen", [ "v28.8", "h-27.22" ] ],
+    [ "lcd1:MOSI", "uno:11", "green", [ "v24", "h-75" ] ],
+    [ "lcd1:CS", "uno:10", "orange", [ "v32", "h-64" ] ],
+    [ "lcd1:D/C", "uno:9", "purple", [ "v38.4", "h85.6" ] ],
+    [ "joystick1:VCC", "uno:5V", "red", [ "v124.8", "h-193.71" ] ],
+    [ "joystick1:GND", "uno:GND.2", "black", [ "v172.8", "h-224.7" ] ],
+    [ "joystick1:VERT", "uno:A0", "purple", [ "v163.2", "h-157.4" ] ],
+    [ "joystick1:HORZ", "uno:A1", "green", [ "v153.6", "h-157.5" ] ],
+    [ "uno:2", "joystick1:SEL", "blue", [ "v-14.49", "h59.61", "v235.29", "h88.49" ] ],
+    [ "btn1:2.r", "uno:4", "gold", [ "v-163.4", "h-355" ] ],
+    [ "btn2:2.r", "uno:3", "gold", [ "v-153.8", "h-287.8" ] ],
+    [ "btn2:1.l", "uno:GND.3", "black", [ "v96", "h-253.6" ] ],
+    [ "btn1:1.l", "uno:GND.3", "black", [ "v105.6", "h-311.2" ] ],
+    [ "btn3:2.r", "uno:5", "gold", [ "v-173", "h-355" ] ],
+    [ "sw1:2", "uno:6", "orange", [ "v0" ] ],
+    [ "sw1:1", "uno:GND.1", "black", [ "v76.8", "h-76.8" ] ],
+    [ "btn3:1.l", "uno:GND.3", "black", [ "v115.2", "h-368.8" ] ]
+  ],
+  "dependencies": {}
+}
