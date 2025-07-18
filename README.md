@@ -3,6 +3,37 @@
 ## Overview  
 This project is a course assignment that involves designing and building an Arduino-based device capable of simulating both Go and Sudoku games. The device reads player moves, enforces game rules, and displays gameplay on a screen as interactive puzzles to exercise the mind.
 
+## Project Demo
+
+<details>
+<summary><b>Click to expand</b></summary>
+
+![Schematic Layout](images/schematic_layout.png)
+
+Schematic layout
+
+![Menu Game Selection Demo](images/menu_selection.png)
+
+Menu game selection demo
+
+![Sudoku Game (Easy) Demo](images/sudoku_game_easy.png)
+
+Sudoku (easy) game demo
+
+![Sudoku Game (Medium) Demo](images/sudoku_game_medium.png)
+
+Sudoku (medium) game demo
+
+![Sudoku Game (Hard) Demo](images/sudoku_game_hard.png)
+
+Sudoku (hard) game demo
+
+![Go Game Demo](images/go_game.png)
+
+Go game demo
+
+</details>
+
 ## Features  
 - Simulates Go and Sudoku gameplay  
 - Reads player input via buttons and joystick  
